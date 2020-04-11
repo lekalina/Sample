@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewmodel"
+            type="com.lekalina.kotlin.sample.viewmodel.AlbumItemViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            style="@style/CustomCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="@color/card_background_color">
+
+                    <ImageView
+                        android:id="@+id/cover"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        app:imageUrl="@{viewmodel.image.link}"
+                        android:contentDescription="@string/content_description_album_cover_photo" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/video_icon"
+                    android:src="@drawable/ic_play"
+                    android:tint="@color/gray"
+                    android:layout_centerInParent="true"
+                    android:visibility='@{viewmodel.image.type.contains(viewmodel.typeVideo) ? View.VISIBLE : View.GONE}'
+                    android:layout_margin="@dimen/standard_margin"
+                    android:layout_width="@dimen/grid_icon_size"
+                    android:layout_height="@dimen/grid_icon_size"
+                    android:contentDescription="@string/content_description_video_icon" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+</layout>

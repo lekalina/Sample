@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Sample</string>
+    <string name="content_description_video_icon">Video Icon</string>
+    <string name="content_description_album_cover_photo">Album cover photo</string>
+    <string name="search_imgur_albums">Search Imgur Albums</string>
+    <string name="empty_search_result">There are no albums matching your search.</string>
+</resources>

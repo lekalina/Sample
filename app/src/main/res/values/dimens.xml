@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="standard_margin">16dp</dimen>
+    <dimen name="grid_icon_size">50dp</dimen>
+    <dimen name="grid_margin">2dp</dimen>
+    <dimen name="standard_toolbar_height">66dp</dimen>
+</resources>
